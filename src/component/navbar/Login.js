@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import { useHref, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-
-const Login = () => {
+const Login = ({ onLogin }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHref();
-    const navigate = useNavigate();
-
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
@@ -19,41 +15,45 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        // Add your login logic here
         console.log(`Email: ${email} Password: ${password}`);
         setEmail('');
         setPassword('');
-        history.push('/dashboard');
+
+        // Simulate successful login
+        onLogin();
+        Swal.fire('Login Successful!', '', 'success');
     };
-    const doSomethingAndNavigate = function () {
-        console.log("I am Doing Something......");
-        navigate("/Home");
-    }
 
     return (
-        <div>
-            <div className='container'>
-                <div className='row'>
-                    <h2>Login</h2>
-                    <form onSubmit={handleSubmit}>
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            value={email}
-                            onChange={handleEmailChange}
-                        />
-                        <br />
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            value={password}
-                            onChange={handlePasswordChange}
-                        />
-                        <br />
-                        <button type="submit" className='btn btn-primary' onClick={doSomethingAndNavigate}>Login</button>
-                    </form>
+        <div className='container'>
+            <div className='row'>
+                <div className='col-sm-3 text-center'>
+                    <div className='card '>
+                        <div className='card-body'>
+                            <h2>Login</h2>
+                            <form onSubmit={handleSubmit}>
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    value={email}
+                                    onChange={handleEmailChange}
+                                />
+                                <br />
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    value={password}
+                                    onChange={handlePasswordChange}
+                                />
+                                <br />
+                                <button type="submit" className='btn btn-info'>Login</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 

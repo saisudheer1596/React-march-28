@@ -10,7 +10,7 @@ import Categories1 from "./component/categories/Categories1"
 export default function App(){
   return(  
     <div>
-      <Navbar />
+      {/*<Navbar />*/}
       {/*<Categories />*/}
       {/*<Categories1 />*/}
       {/*<Carousel />*/}

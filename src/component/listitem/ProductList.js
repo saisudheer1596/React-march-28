@@ -74,15 +74,22 @@ const ProductList = ({ products }) => {
       </select>
 
       {getPaginatedProducts().map((product) => (
-        <div key={product.id}>
-          <img src={product.image} className="card-img-top" alt="aa" width='100' height='550'/>
-          <h3>{product.name}</h3>
-          <p>Title: {product.title}</p>
-          <p>Price: ${product.price}</p>
-          <p>rating: {product.rating.rate}</p>
-          <button onClick={() => handleOpenModal(product)}>View Details</button>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-sm-3'>
+              <div key={product.id}>
+                <img src={product.image} className="card-img-top" alt="aa" width='150' height='250' />
+                <h3>{product.name}</h3>
+                <p>Title: {product.title}</p>
+                <p>Price: ${product.price}</p>
+                <p>rating: {product.rating.rate}</p>
+                <button onClick={() => handleOpenModal(product)} className='btn btn-primary'>View Details</button>
+              </div>
+            </div>
+          </div>
         </div>
-      ))}
+  ))
+}
 
       <ReactPaginate
         pageCount={Math.ceil(sortedProducts.length / productsPerPage)}
@@ -101,7 +108,7 @@ const ProductList = ({ products }) => {
           </div>
         )}
       </Modal>
-    </div>
+    </div >
   );
 };
 

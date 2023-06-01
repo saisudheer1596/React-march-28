@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom'
 import "./Navbar.css"
 
 
-export default function Navbar() {
+
+const Navbar = ({isLoggedIn, onLogout}) =>{
   return <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <a className="navbar-brand " href="#">Online Shopping</a>
@@ -24,8 +25,14 @@ export default function Navbar() {
         <li className="nav-item">
         <NavLink to="/ProductCard" className="nav-link">ProductCard </NavLink>
         </li>
-        <NavLink to="/login" className="nav-link">Login</NavLink>
       </ul>
+        <li className="nav-item">
+        {isLoggedIn ? (
+          <button onClick={onLogout} className='btn btn-primary'>Logout</button>
+        ) : (
+          <NavLink to="/login" className="btn btn-primary">Login</NavLink>
+        )}
+        </li>
       <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
@@ -33,4 +40,5 @@ export default function Navbar() {
     </div>  
   </div>
 </nav>
-}
+};
+export default  Navbar;
