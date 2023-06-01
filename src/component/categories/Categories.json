@@ -1,0 +1,44 @@
+[   
+    {
+        "id": 1,
+        "title":"Grocery", 
+        "image":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/aecfaba5969b96dd.png?q=100"
+    },
+    {
+        "id": 2,
+        "title":"Mobiles", 
+        "image":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d64cae0f8081256a.png?q=100"
+    },
+    {
+        "id": 3,
+        "title":"Fashion", 
+        "image":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d44ffc537ed6e241.png?q=100"
+    }, 
+    {
+        "id": 4,
+        "title":"Home", 
+        "image":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d300931a0fd1c17e.png?q=100"
+    },
+    {
+        "id": 5,
+        "title":"Appliances", 
+        "image":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/e29a070388d534a5.png?q=100"
+    },
+    {
+        "id": 6,
+        "title":"Flights", 
+        "image":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/2dac2decff60c650.png?q=100"
+    },
+    {
+        "id": 7,
+        "title":"Beauty", 
+        "image": "https://rukminim1.flixcart.com/fk-p-flap/128/128/image/994a83c90019fb5f.png?q=100"
+    },
+    {
+        "id": 8,
+        "title": "Electronics",
+        "image":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/7dbcda527b648814.png?q=100"
+    }
+    
+]
+                            

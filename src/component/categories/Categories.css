@@ -1,0 +1,8 @@
+.categories img{
+    min-width: 70px;
+    min-height: 70px;
+}
+.categories div{
+    font-weight: 500;
+    font-size: 14px;
+}
