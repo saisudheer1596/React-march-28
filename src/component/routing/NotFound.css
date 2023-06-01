@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 .not-found {
     font-size: 35px;
     text-align: center;
     margin-top: 100px;
     color: #ff0101;
   }
+=======
+.not-found {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 100px;
+    color: #ff0000;
+  }
+>>>>>>> 0df67ea6dac342501196177dbff275f440fad1f0
   
